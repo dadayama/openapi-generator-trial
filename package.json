@@ -1,0 +1,23 @@
+{
+  "name": "openapi-generator-trial",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/dadayama/openapi-generator-trial.git"
+  },
+  "author": "dadayama",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dadayama/openapi-generator-trial/issues"
+  },
+  "homepage": "https://github.com/dadayama/openapi-generator-trial#readme",
+  "devDependencies": {
+    "@openapitools/openapi-generator-cli": "^2.0.3",
+    "typescript": "^4.0.3"
+  }
+}
