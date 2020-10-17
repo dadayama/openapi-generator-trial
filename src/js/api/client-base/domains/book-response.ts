@@ -11,5 +11,16 @@
  * Do not edit the class manually.
  */
 
-export * from './api';
-export * from './configuration';
+/**
+ *
+ * @export
+ * @interface BookResponse
+ */
+export interface BookResponse {
+  /**
+   *
+   * @type {string}
+   * @memberof BookResponse
+   */
+  title: string;
+}

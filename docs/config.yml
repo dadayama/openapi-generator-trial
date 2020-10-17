@@ -1,0 +1,5 @@
+enablePostProcessFile: true
+withSeparateModelsAndApi: true
+apiPackage: 'api'
+modelPackage: 'domains'
+modelNameSuffix: 'Response'

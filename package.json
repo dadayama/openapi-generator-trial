@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build:api": "TS_POST_PROCESS_FILE='./node_modules/.bin/prettier --write' openapi-generator-cli generate -i ./docs/schema.yml -o ./src/js/api/client-base -g typescript-axios",
+    "build:api": "TS_POST_PROCESS_FILE='./node_modules/.bin/prettier --write' openapi-generator-cli generate -i ./docs/schema.yml -o ./src/js/api/client-base -g typescript-axios -c ./docs/config.yml",
     "build:asset": "webpack",
     "build": "yarn run build:api && yarn run build:asset",
     "watch:api": "watch 'yarn run build:api' ./docs",
@@ -40,5 +40,8 @@
     "webpack": "^5.1.3",
     "webpack-cli": "^4.0.0",
     "webpack-dev-server": "^3.11.0"
+  },
+  "dependencies": {
+    "camelcase-keys": "^6.2.2"
   }
 }

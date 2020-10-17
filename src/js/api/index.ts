@@ -1,10 +1,13 @@
+import axios, { AxiosResponse } from 'axios';
+import camelcaseKeys from 'camelcase-keys';
 import { DefaultApi } from './client-base';
+export * from './client-base/domains';
 
-export const load = async () => {
-  const api = new DefaultApi();
-  const response = await api.fetchBook('1');
-  console.log(response);
+const instance = axios.create();
+instance.interceptors.response.use((response: AxiosResponse<any>) => ({
+  ...response,
+  data: camelcaseKeys(response.data),
+}));
 
-  const book = response.data;
-  console.log(book);
-};
+const basePath = 'http://0.0.0.0:4010';
+export const api = new DefaultApi({}, basePath, instance);
