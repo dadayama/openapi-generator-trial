@@ -1,8 +1,10 @@
-import { DefaultApi } from "./client-base";
+import { DefaultApi } from './client-base';
 
-async () => {
+export const load = async () => {
   const api = new DefaultApi();
-  const response = await api.fetchBook("1");
+  const response = await api.fetchBook('1');
+  console.log(response);
+
   const book = response.data;
   console.log(book);
 };
